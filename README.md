@@ -37,4 +37,4 @@ on:
 
 - 重复的 Lego Batman Trilogy 领取提示，更新 Claimer 脚本后修复了。
 
-- 点击 Star 按钮，手动获取手机。
+- 点击 Star 按钮，手动获取游戏。
