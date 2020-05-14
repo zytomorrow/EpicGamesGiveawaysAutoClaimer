@@ -6,6 +6,8 @@
 
 # 配置方法
 
+**注意：如果你是 Fork 的本项目，请在编辑前进入 Actions 页面允许执行 Action。**
+
 在 GitHub 的 'Settings' - 'Secrets' 添加 EMAIL (你的 Epic 邮箱)，PASSWD (你的 Epic 密码)，SECRET（二步验证 Secret）。
 
 如需使用 Telegram Bot 推送功能，则需继续添加： `TELEGRAM_TO`(此为 Telegram 个人 ID，可通过 @userinfobot 获取), `TELEGRAM_TOKEN`(此为 Bot 的 Token API, 在 @BotFather 创建时可获取)
@@ -23,11 +25,13 @@ on:
       - master
 ```
 
+注意：`yml` 文件是**缩进有关**的，请注意空格的数量。
+
 # 备注
 
 - 由于脚本不知道为何有概率失败，而且 Epic 有时候会中途添加游戏，因此触发时间我改成了每天一次。
 
-- 由于几次尝试发现如果只有 Schedule 的配置，似乎 GitHub 不会建立 （Actions 页面为空），也不会执行脚本。因此添加了 on-push 触发器，这样编辑一次文件之后可以正确的生成 GitHub Actions，触发器也可以正确触发。
+- 由于几次尝试发现如果只有 Schedule 的配置，似乎 GitHub 不会建立 Action（Actions 页面为空），也不会执行脚本。因此添加了 on-push 触发器，这样编辑一次文件之后可以正确的生成 GitHub Actions，触发器也可以正确触发。
 
 - GitHub Actions 的 Schedule 触发不精确，可能有约 5~10 分钟的延迟。
 
