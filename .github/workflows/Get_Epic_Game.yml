@@ -59,7 +59,7 @@ jobs:
       #   if: always()
       #   uses: appleboy/telegram-action@master
       #   with:
-      #     to: "Chat ID"
-      #     token: "TelegramBot 的 Token"
+      #     to: ${{ secrets.TELEGRAM_TO }}
+      #     token: ${{ secrets.TELEGRAM_TOKEN }}
       #     format: markdown
       #     message_file: workdir/games.info
