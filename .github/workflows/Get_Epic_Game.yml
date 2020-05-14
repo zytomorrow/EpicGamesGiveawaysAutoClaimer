@@ -6,11 +6,19 @@ on:
   push:
     branches:
       - master
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   MainWork:
     runs-on: ubuntu-latest
     steps:      
+      - name: Set Timezone to UTC+8
+        env: 
+            DEBIAN_FRONTEND: noninteractive
+        run: |
+          sudo timedatectl set-timezone "$TZ"
+          
       - name: Clone Workflow Repository
         uses: actions/checkout@v2
 
