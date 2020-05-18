@@ -44,3 +44,5 @@ on:
 - GitHub Actions 的 Schedule 触发不精确，可能有约 5~10 分钟的延迟。
 
 - 重复的 Lego Batman Trilogy 领取提示，更新 Claimer 脚本后修复了。
+
+- 点击 Star 按钮，手动获取游戏。
