@@ -1,6 +1,6 @@
 # EpicGames Giveaways Auto Claimer
 
-(中文版)[./README.md], (English Version)[./README_EN.md].
+[中文版](./README.md), [English Version](./README_EN.md).
 
 Using GitHub Actions to auto claim Epic Giveaways.
 
