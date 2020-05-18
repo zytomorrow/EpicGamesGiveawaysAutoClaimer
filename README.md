@@ -4,6 +4,12 @@
 
 1.  `Get_Epic_Game.yml` : 用于定时获取 Epic Game 发放的周免游戏。
 
+# 已知问题
+
+- 可能是由于 GitHub 的 IP 问题，有时候会领取失败。
+  - **鉴于本脚本预制了一个执行时间，可能会导致非常多的 Actions 在差不多的时间执行，很大概率会触发 Epic 的防护机制，建议修改 Schedule 时间。**
+- GTA5 领取失败原因：https://github.com/Revadike/epicgames-freebies-claimer/issues/22
+
 # 配置方法
 
 **注意：如果你是 Fork 的本项目，请在编辑前进入 Actions 页面允许执行 Action。**
@@ -12,6 +18,8 @@
 
 如需使用 Telegram Bot 推送功能，则需继续添加： `TELEGRAM_TO`(此为 Telegram 个人 ID，可通过 @userinfobot 获取), `TELEGRAM_TOKEN`(此为 Bot 的 Token API, 在 @BotFather 创建时可获取)
 
+注：需要提前向你创建的Telegram Bot发送一条消息，否则会在`Send Gift Info`阶段报错`Bad Request: chat not found`。
+
 二步验证的 Secret 在 EpicGames 启用二步验证、扫描二维码的时候会显示。如果你已经启用了，那么关闭再启用即可看到。
 
 并且，修改 .github/workflows/Get_Epic_Game.yml 文件，去掉开头的 `#` 号，如下：
@@ -19,7 +27,7 @@
 ```yaml
 on:
   schedule: # 删除本行开头的 # 号
-    - cron: "25 2 * * *" # 删除本行开头的 # 号
+    - cron: "25 2 * * *" # 删除本行开头的 # 号，另外建议修改一下这个时间，有助于减少失败概率。
   push:
     branches:
       - master
