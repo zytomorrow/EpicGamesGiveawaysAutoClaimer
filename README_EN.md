@@ -20,7 +20,7 @@ In 'Settings' - 'Secrets' page, add three variables: `EMAIL` (Epic account), `PA
 
 If you need telegram bot notification, add `TELEGRAM_TO` (which is Telegram account id, can get by @userinfobot), `TELEGRAM_TOKEN` (which is bot token, can get by @BotFather when the bot is created).
 
-Note: you need to send a message to your bot, or a `Bad Request: chat not found` error will raise.
+Note: you need to send a message to your bot first, or a `Bad Request: chat not found` error will raise.
 
 2FA secret can be found in the QR-code page when you are enabling 2FA. If you already enabled 2FA, disable and re-enable it, a new secret will display.
 
