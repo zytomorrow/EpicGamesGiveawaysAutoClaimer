@@ -18,9 +18,9 @@
 
 在 GitHub 的 'Settings' - 'Secrets' 添加 EMAIL (你的 Epic 邮箱)，PASSWD (你的 Epic 密码)，SECRET（二步验证 Secret）。
 
-如需使用 Telegram Bot 推送功能，则需继续添加： `TELEGRAM_TO`(此为 Telegram 个人 ID，可通过 @userinfobot 获取), `TELEGRAM_TOKEN`(此为 Bot 的 Token API, 在 @BotFather 创建时可获取)
+如需使用 Telegram Bot 推送功能，则需继续添加：`TELEGRAM_TO`(此为 Telegram 个人 ID，可通过 @userinfobot 获取), `TELEGRAM_TOKEN`(此为 Bot 的 Token API, 在 @BotFather 创建时可获取)
 
-注：需要提前向你创建的Telegram Bot发送一条消息，否则会在`Send Gift Info`阶段报错`Bad Request: chat not found`。
+注：需要提前向你创建的 Telegram Bot 发送一条消息，否则会在 `Send Gift Info` 阶段报错 `Bad Request: chat not found`。
 
 二步验证的 Secret 在 EpicGames 启用二步验证、扫描二维码的时候会显示。如果你已经启用了，那么关闭再启用即可看到。
 
