@@ -21,8 +21,6 @@ jobs:
         run: |
           sudo timedatectl set-timezone "$TZ"
           
-      - name: Clone Workflow Repository
-        uses: actions/checkout@v2
 
       - name: Clone Claimer Repository
         uses: actions/checkout@v2
@@ -35,7 +33,7 @@ jobs:
         run: |
           cd workdir
           npm install
-          node claimer '${{ secrets.EMAIL }}' '${{ secrets.PASSWD }}' 0 '${{ secrets.SECRET }}' > games.info
+          node claimer '${{ secrets.EMAIL }}' '${{ secrets.PASSWD }}' 0 '${{ secrets.SECRET }}' * > games.info
 
       - name: Edit Games.info
         if: always()
