@@ -73,3 +73,9 @@ jobs:
       #     token: ${{ secrets.TELEGRAM_TOKEN }}
       #     format: markdown
       #     message_file: workdir/games.info
+
+      # 使用Server酱进行推送到微信
+      - name: Send Gift Info
+        if: always()
+        run: |
+          curl  https://sc.ftqq.com/${{ server_token }}.send?text=Epic领取结果&desp=`cat workdir/games.info`
