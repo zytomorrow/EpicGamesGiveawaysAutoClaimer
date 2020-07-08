@@ -78,4 +78,4 @@ jobs:
       - name: Send Gift Info
         if: always()
         run: |
-          curl  https://sc.ftqq.com/${{ server_token }}.send?text=Epic领取结果&desp=`cat workdir/games.info`
+          curl  https://sc.ftqq.com/${{ secrets.SERVER_TOKEN }}.send?text=Epic领取结果&desp=`cat workdir/games.info`
